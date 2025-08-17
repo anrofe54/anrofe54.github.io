@@ -5,14 +5,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>TRUFAMANIA</title>
   <link rel="stylesheet" href="estilos-generales HTML5.css" type="text/css" media="all">
+  <style>
+    :root { box-sizing: border-box; }
+    *, *::before, *::after { box-sizing: inherit; }
+    html, body { margin: 0; padding: 0; }
+    .wrap { max-width: 100%; display: flex; justify-content: center; }
+    img.responsive { width: 100%; height: auto; display: block; }
+  </style>
 </head>
 <body>
-  <h1>
-    <img src="images/trufamania.jpg" alt="Trufamania" width="800" height="600" border="0" usemap="#Map">
-    <map name="Map">
-      <area shape="rect" coords="623,27,767,109" href="truffles-home.htm" alt="trufamania">
-      <area shape="rect" coords="124,131,654,470" href="inicio-trufas.htm" alt="trufamania">
-    </map>
-  </h1>
+  <main class="wrap">
+    <!-- OJO: usemap y name deben coincidir exactamente -->
+    <img id="hero" class="responsive"
+         src="images/trufamania.jpg"
+         alt="Trufamania"
+         width="800" height="600"
+         usemap="#Map">
+  </main>
+
+  <map name="Map" id="Map">
+    <area shape="rect" coords="623,27,767,109" href="truffles-home.htm" alt="trufamania">
+    <area shape="rect" coords="124,131,654,470" href="inicio-trufas.htm" alt="trufamania">
+  </map>
+
+  <script>
+    (function () {
+      const img = document.getElementById('hero');
+      const map = document.getElementById('Map');
+
+      function scaleAreas() {
+        if (!img.naturalWidth || !img.naturalHeight) return;
+        const ratio = img.clientWidth / img.naturalWidth; // mantiene proporción
+        map.querySelectorAll('area[coords]').forEach(area => {
+          if (!area.dataset.origCoords) area.dataset.origCoords = area.coords;
+          const orig = area.dataset.origCoords.split(',').map(Number);
+          // Escala x, y y posibles radios con el mismo ratio
+          const scaled = orig.map(n => Math.round(n * ratio));
+          area.coords = scaled.join(',');
+        });
+      }
+
+      function onReady() {
+        img.style.width = '100%';
+        img.style.height = 'auto';
+        scaleAreas();
+      }
+
+      if (img.complete) onReady();
+      img.addEventListener('load', onReady);
+      window.addEventListener('resize', scaleAreas);
+      window.addEventListener('orientationchange', () => setTimeout(scaleAreas, 50));
+    })();
+  </script>
 </body>
 </html>
