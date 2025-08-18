@@ -6,20 +6,37 @@
   <title>TRUFAMANIA</title>
   <link rel="stylesheet" href="estilos-generales HTML5.css" type="text/css" media="all">
   <style>
+    /* Centrado total y responsive */
     :root { box-sizing: border-box; }
     *, *::before, *::after { box-sizing: inherit; }
-    html, body { margin: 0; padding: 0; }
-    .wrap { max-width: 100%; display: flex; justify-content: center; }
-    img.responsive { width: 100%; height: auto; display: block; }
+    html, body { height: 100%; margin: 0; }
+    body {
+      min-height: 100svh;
+      display: grid;
+      place-items: center; /* centro horizontal y vertical */
+      padding: 0;
+    }
+
+    /* Haz que el contenedor use todo el ancho disponible */
+    .wrap { width: min(100%, 1200px); margin: 0 auto; }
+
+    /* Overrides para evitar límites del CSS externo */
+    #hero {
+      width: 100% !important;      /* ocupa todo el ancho del contenedor */
+      max-width: none !important;  /* SIN tope de 800px u otros */
+      height: auto !important;
+      display: block;
+    }
+
+    area:focus { outline: 2px dashed; }
   </style>
 </head>
 <body>
   <main class="wrap">
     <!-- OJO: usemap y name deben coincidir exactamente -->
-    <img id="hero" class="responsive"
+    <img id="hero"
          src="images/trufamania.jpg"
          alt="Trufamania"
-         width="800" height="600"
          usemap="#Map">
   </main>
 
@@ -29,27 +46,23 @@
   </map>
 
   <script>
+    /* Reescala las áreas del image map cuando cambie el tamaño de la imagen */
     (function () {
       const img = document.getElementById('hero');
       const map = document.getElementById('Map');
 
       function scaleAreas() {
         if (!img.naturalWidth || !img.naturalHeight) return;
-        const ratio = img.clientWidth / img.naturalWidth; // mantiene proporción
+        const ratio = img.clientWidth / img.naturalWidth; // puede ser > 1 si amplías en escritorio
         map.querySelectorAll('area[coords]').forEach(area => {
           if (!area.dataset.origCoords) area.dataset.origCoords = area.coords;
           const orig = area.dataset.origCoords.split(',').map(Number);
-          // Escala x, y y posibles radios con el mismo ratio
           const scaled = orig.map(n => Math.round(n * ratio));
           area.coords = scaled.join(',');
         });
       }
 
-      function onReady() {
-        img.style.width = '100%';
-        img.style.height = 'auto';
-        scaleAreas();
-      }
+      function onReady() { scaleAreas(); }
 
       if (img.complete) onReady();
       img.addEventListener('load', onReady);
