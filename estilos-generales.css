@@ -112,3 +112,11 @@ body {text-align: center; background: url("images/fondo3.jpg") black; background
   #pie { width: 100%; box-sizing: border-box; }
   #pie h5 { padding: 5px 10px; }
 }
+
+
+/* Corrección altura #genero en móvil */
+@media (max-width: 768px) {
+  #genero {
+    align-self: flex-start;
+  }
+}
