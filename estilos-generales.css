@@ -180,9 +180,10 @@ body {text-align: center; background: url("images/fondo3.jpg") black; background
 
   /* Las imágenes no se salen del contenedor */
   img {
-    max-width: 100%;
-    height: auto;
-  }
+  max-width: 100% !important;
+  width: auto !important;
+  height: auto !important;
+}
 
   /* El bloque entero también se adapta */
   #entero {
