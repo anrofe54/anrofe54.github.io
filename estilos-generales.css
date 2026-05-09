@@ -120,3 +120,16 @@ body {text-align: center; background: url("images/fondo3.jpg") black; background
     align-self: flex-start;
   }
 }
+
+
+/* Forzar columnaI en una sola columna en móvil */
+@media (max-width: 768px) {
+  #columnaI {
+    flex-direction: column;
+  }
+  #genero, #NUEVAS, #menu {
+    width: 100% !important;
+    min-width: unset;
+    box-sizing: border-box;
+  }
+}
