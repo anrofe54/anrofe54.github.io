@@ -1,89 +1,355 @@
-* {text-indent:0px; margin:0px ; padding:0px ; border: 0px;}
-p {text-align: justify}
-hr{margin: 0 auto; height: 1px; border: 0; color: #660000; background-color: #660000; width: 75%;}
-h1 {padding: 10px 40px 20px 30px; font-size: 1.3em; color:red ; font-weight: bold ; text-decoration: underline ; text-align: center}
-h2 {padding: 10px 40px 10px 30px; font-size: 1.1em; color:red ; font-weight: bold ; text-decoration: none; text-align: left}
-h3 {padding: 10px 0px 5px 0px; font-size: 1.3em; color:red; text-decoration: none ; font-weight:normal; text-align: center}
-h4 {padding: 5px 0px 0px 30px; color:#660000; text-align: left}
-h5 {padding: 2px 0px 2px 0px}
-h6 {color:#660000; padding: 0px 0px 20px 0px; font-weight: normal; font-size: 1em}
-td {border-width:0px;border-style:solid;border-color:#666666;padding:5px 5px 5px 0px; text-align: center; font-family: "Times New Roman", Verdana, Arial;  font-size: 12px }
-br {clear: left}
-body {text-align: center; background: url("images/fondo3.jpg") black; background-attachment:fixed}
-#global {margin: 0 auto; width:1024px}
-#cabecera {background-color: white; height:108px; border: 1px solid #660000}
-#logotipo   {float: left; width:120px; padding-top: 20px; padding-left:5px; padding-right:8px;}
-#cabanim {float: left; width:884px; margin-top:5px}
-#navegacion {width:1024px; background-color: #660000; height:30px; font-family: arial,verdana, Monserrat;  font-size: 15pt}
-#navegacion ul { margin-left: 50px }
-#navegacion a {color: white; text-decoration: none; display: block}
+* {
+  text-indent: 0px;
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+
+p {
+  text-align: justify;
+}
+
+hr {
+  margin: 0 auto;
+  height: 1px;
+  border: 0;
+  color: #660000;
+  background-color: #660000;
+  width: 75%;
+}
+
+h1 {
+  padding: 10px 40px 20px 30px;
+  font-size: 1.3em;
+  color: red;
+  font-weight: bold;
+  text-decoration: underline;
+  text-align: center;
+}
+
+h2 {
+  padding: 10px 40px 10px 30px;
+  font-size: 1.1em;
+  color: red;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: left;
+}
+
+h3 {
+  padding: 10px 0px 5px 0px;
+  font-size: 1.3em;
+  color: red;
+  text-decoration: none;
+  font-weight: normal;
+  text-align: center;
+}
+
+h4 {
+  padding: 5px 0px 0px 30px;
+  color: #660000;
+  text-align: left;
+}
+
+h5 {
+  padding: 2px 0px 2px 0px;
+}
+
+h6 {
+  color: #660000;
+  padding: 0px 0px 20px 0px;
+  font-weight: normal;
+  font-size: 1em;
+}
+
+td {
+  border-width: 0px;
+  border-style: solid;
+  border-color: #666666;
+  padding: 5px 5px 5px 0px;
+  text-align: center;
+  font-family: "Times New Roman", Verdana, Arial;
+  font-size: 12px;
+}
+
+br {
+  clear: left;
+}
+
+body {
+  text-align: center;
+  background: url("images/fondo3.jpg") black;
+  background-attachment: fixed;
+}
+
+#global {
+  margin: 0 auto;
+  width: 1024px;
+}
+
+#cabecera {
+  background-color: white;
+  height: 108px;
+  border: 1px solid #660000;
+}
+
+#logotipo {
+  float: left;
+  width: 120px;
+  padding-top: 20px;
+  padding-left: 5px;
+  padding-right: 8px;
+}
+
+#cabanim {
+  float: left;
+  width: 884px;
+  margin-top: 5px;
+}
+
+#navegacion {
+  width: 1024px;
+  background-color: #660000;
+  height: 30px;
+  font-family: arial, verdana, Monserrat;
+  font-size: 15pt;
+}
+
+#navegacion ul {
+  margin-left: 50px;
+}
+
+#navegacion a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
 #navegacion a:link {}
+
 #navegacion a:visited {}
-#navegacion a:hover {color: yellow;text-decoration: underline}
+
+#navegacion a:hover {
+  color: yellow;
+  text-decoration: underline;
+}
+
 #navegacion a:active {}
-#navegacion li {float:left; list-style:none; margin: 4px 25px 0px 15px }
-#contenido {width:1024px; background:url("images/fondo.jpg") white; float:left; border-top: 2px solid #660000; //width:1024 /*PARA CORREGIR INTERNET EXPLORER*/}
-#columnaI {float: left; width:145px}
-#central {float: left; width:857px; margin: 10px; font-family: Helvetica, Arial, Verdana; line-height: 1.2; font-size: 1.1em; //width:829px /*PARA CORREGIR INTERNET EXPLORER*/}
-#centralA {float: left; width:857px; margin: 10px; font-family: Helvetica, Arial, Verdana; line-height: 1.2; font-size: 1.1em; //width:829px /*PARA CORREGIR INTERNET EXPLORER*/}
-#central p {text-indent: 20px; padding: 0px 30px 0px 30px; text-align: justify; color:#660000}
-#entero {width:1002px; margin: 10px; font-family: Helvetica, Arial, Verdana; line-height: 1.2; font-size: 1.1em;}
-#entero p {text-indent: 20px; padding: 0px 92px 0px 92px; text-align: justify; color:#660000}
-#pie {background-color: #660000; color: white; padding:0px 0px 0px 0px}
-#pie a {color:white; text-decoration: underline}
+
+#navegacion li {
+  float: left;
+  list-style: none;
+  margin: 4px 25px 0px 15px;
+}
+
+#contenido {
+  width: 1024px;
+  background: url("images/fondo.jpg") white;
+  float: left;
+  border-top: 2px solid #660000;
+}
+
+#columnaI {
+  float: left;
+  width: 145px;
+}
+
+#central {
+  float: left;
+  width: 857px;
+  margin: 10px;
+  font-family: Helvetica, Arial, Verdana;
+  line-height: 1.2;
+  font-size: 1.1em;
+}
+
+#centralA {
+  float: left;
+  width: 857px;
+  margin: 10px;
+  font-family: Helvetica, Arial, Verdana;
+  line-height: 1.2;
+  font-size: 1.1em;
+}
+
+#central p {
+  text-indent: 20px;
+  padding: 0px 30px 0px 30px;
+  text-align: justify;
+  color: #660000;
+}
+
+#entero {
+  width: 1002px;
+  margin: 10px;
+  font-family: Helvetica, Arial, Verdana;
+  line-height: 1.2;
+  font-size: 1.1em;
+}
+
+#entero p {
+  text-indent: 20px;
+  padding: 0px 92px 0px 92px;
+  text-align: justify;
+  color: #660000;
+}
+
+#pie {
+  background-color: #660000;
+  color: white;
+  padding: 0px 0px 0px 0px;
+}
+
+#pie a {
+  color: white;
+  text-decoration: underline;
+}
+
 #pie a:link {}
+
 #pie a:visited {}
-#pie a:hover {color: yellow;text-decoration: underline; background-color: #660000}
+
+#pie a:hover {
+  color: yellow;
+  text-decoration: underline;
+  background-color: #660000;
+}
+
 #genero {
-	background-color:#660000;
-	width: 160px;
-	float:left;
-	text-align: left;
-	border: 1px solid #660000;
-	margin:10px 0px 5px 7px;
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size: 10pt
-	border-radius: 10px;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
+  background-color: #660000;
+  width: 160px;
+  float: left;
+  text-align: left;
+  border: 1px solid #660000;
+  margin: 10px 0px 5px 7px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 10pt;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
 }
-#genero a {color: white; background-color:#660000; text-decoration: none; display: block;}
+
+#genero a {
+  color: white;
+  background-color: #660000;
+  text-decoration: none;
+  display: block;
+}
+
 #genero a:link {}
+
 #genero a:visited {}
-#genero a:hover {color: yellow;}
-#genero a:active {}
-#genero h1 {padding: 1px 5px 1px 5px; color:#660000; font-size: 1.1em; text-align: center; text-decoration: none;}
-#NUEVAS {
-	background-color:#660000;
-	width: 160px;
-	float:left;
-	text-align: left;
-	border: 1px solid #660000;
-	margin:10px 0px 5px 7px;
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size: 10pt
-	border-radius: 10px;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
+
+#genero a:hover {
+  color: yellow;
 }
-#NUEVAS a {color: #F30 ; background-color: #660000; text-decoration: none; display: block;}
+
+#genero a:active {}
+
+#genero h1 {
+  padding: 1px 5px 1px 5px;
+  color: #660000;
+  font-size: 1.1em;
+  text-align: center;
+  text-decoration: none;
+}
+
+#NUEVAS {
+  background-color: #660000;
+  width: 160px;
+  float: left;
+  text-align: left;
+  border: 1px solid #660000;
+  margin: 10px 0px 5px 7px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 10pt;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+}
+
+#NUEVAS a {
+  color: #F30;
+  background-color: #660000;
+  text-decoration: none;
+  display: block;
+}
+
 #NUEVAS a:link {}
+
 #NUEVAS a:visited {}
-#NUEVAS a:hover {color: yellow;}
+
+#NUEVAS a:hover {
+  color: yellow;
+}
+
 #NUEVAS a:active {}
-#NUEVAS h1 {padding: 1px 5px 1px 5px; color:#660000; font-size: 1.1em; text-align: center; text-decoration: none;}
-#menu a:active {}
-#menu {background-color:#FFE7BA; width: 150px ; float:left; text-align: left;border: 1px solid #660000; margin:20px 0px 20px 7px;  font-family: Verdana, Arial, Helvetica, sans-serif;  font-size: 10pt; font-weight: bold;}
-#menu a {color:#660000; text-decoration: none; display: block}
+
+#NUEVAS h1 {
+  padding: 1px 5px 1px 5px;
+  color: #660000;
+  font-size: 1.1em;
+  text-align: center;
+  text-decoration: none;
+}
+
+#menu {
+  background-color: #FFE7BA;
+  width: 150px;
+  float: left;
+  text-align: left;
+  border: 1px solid #660000;
+  margin: 20px 0px 20px 7px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 10pt;
+  font-weight: bold;
+}
+
+#menu a {
+  color: #660000;
+  text-decoration: none;
+  display: block;
+}
+
 #menu a:link {}
+
 #menu a:visited {}
-#menu a:hover {color: yellow;text-decoration: underline; background-color: #660000}
+
+#menu a:hover {
+  color: yellow;
+  text-decoration: underline;
+  background-color: #660000;
+}
+
 #menu a:active {}
-#menu li {list-style:none; margin: 4px 4px 10px 6px}
-#menu h1 {padding: 5px 0px 0px 5px; color:#660000; text-align: left; text-decoration: underline;}
-#idiomas {width: 118px ;margin:0px 0px 0px 10px;}
-#idiomas ul {margin-left: 0px; margin-top: 12px}
-#idiomas li {float: left; list-style:none; padding: 0px 5px 0px 5px}
+
+#menu li {
+  list-style: none;
+  margin: 4px 4px 10px 6px;
+}
+
+#menu h1 {
+  padding: 5px 0px 0px 5px;
+  color: #660000;
+  text-align: left;
+  text-decoration: underline;
+}
+
+#idiomas {
+  width: 118px;
+  margin: 0px 0px 0px 10px;
+}
+
+#idiomas ul {
+  margin-left: 0px;
+  margin-top: 12px;
+}
+
+#idiomas li {
+  float: left;
+  list-style: none;
+  padding: 0px 5px 0px 5px;
+}
 
 
 /* ================================================
@@ -91,36 +357,42 @@ body {text-align: center; background: url("images/fondo3.jpg") black; background
    Se activa solo en pantallas menores de 768px.
    No afecta nada en escritorio.
    ================================================ */
+
 @media (max-width: 768px) {
 
-  /* El contenedor principal deja de tener ancho fijo */
   #global {
     width: 100%;
+    max-width: 100%;
   }
 
-  /* La cabecera se adapta en altura */
   #cabecera {
     height: auto;
     overflow: hidden;
   }
 
-  /* El logo se hace más pequeño */
   #logotipo {
     width: 80px;
     padding-top: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
   }
 
-  /* La imagen de cabecera ocupa el ancho disponible */
+  #logotipo img {
+    max-width: 100%;
+    height: auto;
+  }
+
   #cabanim {
     width: calc(100% - 95px);
     margin-top: 0;
   }
+
   #cabanim img {
-    width: 100%;
-    height: auto;
+    width: 100% !important;
+    height: auto !important;
+    display: block;
   }
 
-  /* El menú de navegación se adapta: los elementos se apilan o hacen scroll horizontal */
   #navegacion {
     width: 100%;
     height: auto;
@@ -128,23 +400,24 @@ body {text-align: center; background: url("images/fondo3.jpg") black; background
     overflow-x: auto;
     white-space: nowrap;
   }
+
   #navegacion ul {
     margin-left: 5px;
     display: inline-block;
   }
+
   #navegacion li {
     margin: 6px 10px 6px 5px;
     display: inline-block;
     float: none;
   }
 
-  /* El contenido deja de tener ancho fijo */
   #contenido {
     width: 100%;
     float: none;
+    box-sizing: border-box;
   }
 
-  /* La columna izquierda (menú de especies) pasa a estar encima del contenido */
   #columnaI {
     float: none;
     width: 100%;
@@ -155,8 +428,9 @@ body {text-align: center; background: url("images/fondo3.jpg") black; background
     box-sizing: border-box;
   }
 
-  /* Los bloques de menú lateral se hacen horizontales y compactos */
-  #genero, #NUEVAS, #menu {
+  #genero,
+  #NUEVAS,
+  #menu {
     float: none;
     width: auto;
     flex: 1 1 auto;
@@ -164,67 +438,27 @@ body {text-align: center; background: url("images/fondo3.jpg") black; background
     min-width: 140px;
   }
 
-  /* El contenido central ocupa todo el ancho */
-  #central, #centralA {
-    float: none;
-    width: 100%;
-    margin: 5px 0;
-    box-sizing: border-box;
-  }
-
-  /* Los párrafos con padding excesivo se ajustan */
-  #central p {
-    padding: 0px 10px 0px 10px;
-    text-indent: 10px;
-  }
-
-  /* Las imágenes no se salen del contenedor */
-#central img,
-#centralA img,
-#entero img,
-#contenido img {
-  display: block !important;
-  float: none !important;
-  clear: both !important;
-  max-width: 100% !important;
-  width: auto !important;
-  height: auto !important;
-  margin: 10px auto !important;
-}
-	
-  /* El bloque entero también se adapta */
-  #entero {
-    width: 100%;
-    box-sizing: border-box;
-  }
-  #entero p {
-    padding: 0px 15px 0px 15px;
-  }
-
-  /* Los idiomas centrados */
-  #idiomas {
-    width: 100%;
-    text-align: center;
-    margin: 5px auto;
-  }
-
-}
-
-  /* =================================================
-     CENTRADO REAL DE TÍTULOS E IMÁGENES EN MÓVIL
-     ================================================= */
-
   #central,
   #centralA,
   #entero {
+    float: none;
     width: 100% !important;
     max-width: 100% !important;
+    margin: 5px 0;
     box-sizing: border-box !important;
     text-align: center !important;
     overflow: hidden;
   }
 
-  /* Centrar títulos principales de las fichas */
+  #central p,
+  #centralA p,
+  #entero p {
+    padding: 0px 10px 0px 10px;
+    text-indent: 10px;
+    text-align: justify !important;
+    box-sizing: border-box;
+  }
+
   #central h1,
   #central h2,
   #central h3,
@@ -248,9 +482,9 @@ body {text-align: center; background: url("images/fondo3.jpg") black; background
     padding-right: 10px !important;
     margin-left: auto !important;
     margin-right: auto !important;
+    box-sizing: border-box;
   }
 
-  /* Centrar imágenes aunque estén dentro de enlaces */
   #central img,
   #centralA img,
   #entero img,
@@ -261,20 +495,42 @@ body {text-align: center; background: url("images/fondo3.jpg") black; background
     max-width: 100% !important;
     width: auto !important;
     height: auto !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+    margin: 10px auto !important;
   }
 
-  /* Los enlaces que contienen imágenes también se centran */
-  #central a,
-  #centralA a,
-  #entero a {
+  #idiomas {
+    width: 100%;
     text-align: center;
+    margin: 5px auto;
   }
 
-  /* Los párrafos siguen justificados */
-  #central p,
-  #centralA p,
-  #entero p {
-    text-align: justify !important;
+  #idiomas ul {
+    display: inline-block;
+    margin: 5px auto;
   }
+
+  #idiomas li {
+    float: none;
+    display: inline-block;
+  }
+
+  table {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  td {
+    box-sizing: border-box;
+  }
+
+  #pie {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  #pie h5 {
+    padding: 5px 10px;
+  }
+
+}
