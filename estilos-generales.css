@@ -84,3 +84,120 @@ body {text-align: center; background: url("images/fondo3.jpg") black; background
 #idiomas {width: 118px ;margin:0px 0px 0px 10px;}
 #idiomas ul {margin-left: 0px; margin-top: 12px}
 #idiomas li {float: left; list-style:none; padding: 0px 5px 0px 5px}
+
+
+/* ================================================
+   RESPONSIVE PARA MÓVIL
+   Se activa solo en pantallas menores de 768px.
+   No afecta nada en escritorio.
+   ================================================ */
+@media (max-width: 768px) {
+
+  /* El contenedor principal deja de tener ancho fijo */
+  #global {
+    width: 100%;
+  }
+
+  /* La cabecera se adapta en altura */
+  #cabecera {
+    height: auto;
+    overflow: hidden;
+  }
+
+  /* El logo se hace más pequeño */
+  #logotipo {
+    width: 80px;
+    padding-top: 10px;
+  }
+
+  /* La imagen de cabecera ocupa el ancho disponible */
+  #cabanim {
+    width: calc(100% - 95px);
+    margin-top: 0;
+  }
+  #cabanim img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* El menú de navegación se adapta: los elementos se apilan o hacen scroll horizontal */
+  #navegacion {
+    width: 100%;
+    height: auto;
+    font-size: 11pt;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  #navegacion ul {
+    margin-left: 5px;
+    display: inline-block;
+  }
+  #navegacion li {
+    margin: 6px 10px 6px 5px;
+    display: inline-block;
+    float: none;
+  }
+
+  /* El contenido deja de tener ancho fijo */
+  #contenido {
+    width: 100%;
+    float: none;
+  }
+
+  /* La columna izquierda (menú de especies) pasa a estar encima del contenido */
+  #columnaI {
+    float: none;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+
+  /* Los bloques de menú lateral se hacen horizontales y compactos */
+  #genero, #NUEVAS, #menu {
+    float: none;
+    width: auto;
+    flex: 1 1 auto;
+    margin: 5px;
+    min-width: 140px;
+  }
+
+  /* El contenido central ocupa todo el ancho */
+  #central, #centralA {
+    float: none;
+    width: 100%;
+    margin: 5px 0;
+    box-sizing: border-box;
+  }
+
+  /* Los párrafos con padding excesivo se ajustan */
+  #central p {
+    padding: 0px 10px 0px 10px;
+    text-indent: 10px;
+  }
+
+  /* Las imágenes no se salen del contenedor */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* El bloque entero también se adapta */
+  #entero {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  #entero p {
+    padding: 0px 15px 0px 15px;
+  }
+
+  /* Los idiomas centrados */
+  #idiomas {
+    width: 100%;
+    text-align: center;
+    margin: 5px auto;
+  }
+
+}
