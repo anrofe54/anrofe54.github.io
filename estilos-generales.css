@@ -179,16 +179,17 @@ body {text-align: center; background: url("images/fondo3.jpg") black; background
   }
 
   /* Las imágenes no se salen del contenedor */
-  img {
+#central img,
+#centralA img,
+#entero img,
+#contenido img {
+  display: block !important;
+  float: none !important;
+  clear: both !important;
   max-width: 100% !important;
   width: auto !important;
   height: auto !important;
-}
-	
-#central img, #centralA img, #contenido img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 10px auto !important;
 }
 	
   /* El bloque entero también se adapta */
@@ -208,3 +209,72 @@ body {text-align: center; background: url("images/fondo3.jpg") black; background
   }
 
 }
+
+  /* =================================================
+     CENTRADO REAL DE TÍTULOS E IMÁGENES EN MÓVIL
+     ================================================= */
+
+  #central,
+  #centralA,
+  #entero {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+    overflow: hidden;
+  }
+
+  /* Centrar títulos principales de las fichas */
+  #central h1,
+  #central h2,
+  #central h3,
+  #central h4,
+  #central h5,
+  #central h6,
+  #centralA h1,
+  #centralA h2,
+  #centralA h3,
+  #centralA h4,
+  #centralA h5,
+  #centralA h6,
+  #entero h1,
+  #entero h2,
+  #entero h3,
+  #entero h4,
+  #entero h5,
+  #entero h6 {
+    text-align: center !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* Centrar imágenes aunque estén dentro de enlaces */
+  #central img,
+  #centralA img,
+  #entero img,
+  #contenido img {
+    display: block !important;
+    float: none !important;
+    clear: both !important;
+    max-width: 100% !important;
+    width: auto !important;
+    height: auto !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* Los enlaces que contienen imágenes también se centran */
+  #central a,
+  #centralA a,
+  #entero a {
+    text-align: center;
+  }
+
+  /* Los párrafos siguen justificados */
+  #central p,
+  #centralA p,
+  #entero p {
+    text-align: justify !important;
+  }
