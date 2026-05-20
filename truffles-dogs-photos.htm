@@ -17,7 +17,7 @@
 Shadowbox.init({language: "en" });
 </script>
 </head>
-<body>
+<body class="pagina-galeria-fotos">
 <div id="global">
 		  <input type="checkbox" id="nav-toggle" class="nav-toggle">
 
@@ -34,6 +34,8 @@ Shadowbox.init({language: "en" });
 					      <div id="idiomas">
     <ul><li><a href="fotos-perros-truferos.htm"><img src="images/spain.gif" Title="Espa&ntilde;ol" alt="Espa&ntilde;ol"></a></li><li><a href="truffles-dogs-photos.htm"><img src="images/unitedkingdom.gif" Title="English" alt="English"></a></li></ul>
      </div>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-toggle-label">Galleries</label>
 <div id="menu">
 					 <div style="text-align:center;">
 		 			 <ul>
@@ -43,7 +45,7 @@ Shadowbox.init({language: "en" });
 		 			 </div>
 </div>
 			<div id="central">
-					 <h1>PHOTO GALLERY - TRUFFLE DOGS</h1>
+					 <h1><span class="titulo-galeria-prefijo">PHOTO GALLERY - </span>TRUFFLE DOGS</h1>
 <table class="galeria-fotos" style="margin: 0 auto;">
 <TR>
 <TD VALIGN=BOTTOM><A HREF="perros/brown melano.jpg" rel="shadowbox[perros]" title="Brown"><IMG SRC="perros/TN_brown melano.JPG" ALT="Brown"><BR>Brown</A></TD>
